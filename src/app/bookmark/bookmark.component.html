@@ -1,0 +1,87 @@
+<!-- <div style="display:flex; flex-direction: row;">
+  <mat-card *ngFor="let mark of covidBookmarks" style="background-color: blueviolet;padding: 10px;margin: 10px;"
+    fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+    <mat-card-header>
+      <mat-card-title>{{mark.state}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <tr>
+          <td>Confirmed</td>
+          <td>{{mark.confirmed}}</td>
+        </tr>
+        <tr>
+          <td>Deceased</td>
+          <td>{{mark.deceased}}</td>
+        </tr>
+        <tr>
+          <td>Recovered</td>
+          <td>{{mark.recovered}}</td>
+        </tr>
+        <tr>
+          <td>Tested</td>
+          <td>{{mark.tested}}</td>
+        </tr>
+        <tr>
+          <td>Vaccinated1</td>
+          <td>{{mark.vaccinated1}}</td>
+        </tr>
+        <tr>
+          <td>Vaccinated2</td>
+          <td>{{mark.vaccinated2}}</td>
+        </tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let mark of covidBookmarks" style="margin-top: 20px;" class="col-12 col-lg-3 col-md-6 col-sm-12">
+      <mat-card style="background-image: linear-gradient(gray, white);">
+        <mat-card-header>
+          <mat-card-title>{{mark.state}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <table >
+            <tr>
+              <td>Confirmed</td>
+              <td>:&nbsp;&nbsp;</td>
+              <td>{{mark.confirmed}}</td>
+            </tr>
+            <tr>
+              <td>Deceased</td>
+              <td>:&nbsp;&nbsp;</td>
+              <td>{{mark.deceased}}</td>
+            </tr>
+            <tr>
+              <td>Recovered </td>
+              <td>:&nbsp;&nbsp;</td>
+              <td>{{mark.recovered}}</td>
+            </tr>
+            <tr>
+              <td>Tested </td>
+              <td>:&nbsp;&nbsp;</td>
+              <td>{{mark.tested}}</td>
+            </tr>
+            <tr>
+              <td>Vaccinated1 </td>
+              <td>:&nbsp;&nbsp;</td>
+              <td>{{mark.vaccinated1}}</td>
+            </tr>
+            <tr>
+              <td>Vaccinated2 </td>
+              <td>:&nbsp;&nbsp;</td>
+              <td>{{mark.vaccinated2}}</td>
+            </tr>
+          </table>
+         
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" style="background-color: coral;" (click)="removeBookmark(mark.id)">Remove</button>
+      </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

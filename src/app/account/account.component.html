@@ -1,0 +1,134 @@
+
+<!-- <div class="card">
+  <div class="card-body py-5 px-md-5">
+    <form class="card card-body">
+      <div class="row">
+          <div class="col px-1 mb-2">
+              <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                  <span class="h6 small bg-white text-muted px-1">Username</span>
+              </label>
+              <input type="text" class="form-control mt-2" id="input1">
+          </div>
+          <div class="col px-1 mb-2">
+              <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                  <span class="h6 small bg-white text-muted px-1">Password</span>
+              </label>
+              <input type="password" class="form-control mt-2" id="input2">
+          </div>
+      </div>
+    </form>
+
+
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div>
+
+            <h1 style="text-align: center;">Covid Analyser</h1>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center h-100">
+
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="./assets/img/covid.jpeg" class="img-fluid" alt="Covid image">
+            </div>
+
+
+
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card">
+                    <div class="card-body py-5 px-md-5">
+                        <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col px-1 mb-2">
+                                    <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">Username</span>
+                                    </label>
+                                    <input type="text" formControlName="username" class="form-control mt-2" id="username"
+                                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                                </div>
+                                <div class="col px-1 mb-2">
+                                    <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">Password</span>
+                                    </label>
+                                    <input type="password" formControlName="password" class="form-control mt-2" id="pasword"
+                                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col px-1 mb-2">
+                                    <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">FirstName</span>
+                                    </label>
+                                    <input type="text"  formControlName="firstName" class="form-control mt-2" id="firstName"
+                                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                                </div>
+                                <div class="col px-1 mb-2">
+                                    <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">LastName</span>
+                                    </label>
+                                    <input type="text" formControlName="lastName" class="form-control mt-2" id="lastName"
+                                    >
+                                </div>
+                            </div><div class="row">
+                                <div class="col px-1 mb-2">
+                                    <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">Email</span>
+                                    </label>
+                                    <input type="text" formControlName="email" class="form-control mt-2" id="email"
+                                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                </div>
+                                <div class="col px-1 mb-2">
+                                    <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">City</span>
+                                    </label>
+                                    <input type="text" formControlName="city" class="form-control mt-2" id="city"
+                                    [ngClass]="{ 'is-invalid': submitted && f.city.errors }">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col px-1 mb-2">
+                                    <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">Address1</span>
+                                    </label>
+                                    <input type="text" formControlName="address1" class="form-control mt-2" id="address1">
+                                </div>
+                                <div class="col px-1 mb-2">
+                                    <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                        <span class="h6 small bg-white text-muted px-1">Address2</span>
+                                    </label>
+                                    <input type="text" formControlName="address2" class="form-control mt-2" id="address2">
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-primary btn-block mb-4">
+                                Sign up
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
